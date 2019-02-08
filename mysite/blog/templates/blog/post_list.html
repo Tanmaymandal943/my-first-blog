@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>>Tanmay's Django Blog</title>
+	<title>Tanmay's Django Blog</title>
 </head>
 <body>
 
-	<p>Never though I'd have to return to HTML </p>
+	<p>Never though I'd have to return to HTML </p><br/>
+	{% for post in posts %}
+		<div> <p>published: {{post.published_date}} </p>
+			  <h2><a href="">{{post.title}}</a></h2>
+			  <p>{{post.text|linebreaksbr}}</p>
+		</div>   
+	{% endfor %}
+
 </body>
 </html>
